@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<persistence version="2.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/persistence">
+
+
+<persistence-unit transaction-type="RESOURCE_LOCAL" name="test">
+
+<!-- Persistence provider -->
+
+
+<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+<!-- Entity classes -->
+
+
+<class>com.ash.entity.Customer</class>
+
+<class>com.ash.entity.Loans</class>
+
+
+<properties>
+
+<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+
+<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/manytoone"/>
+
+<property name="javax.persistence.jdbc.user" value="root"/>
+
+<property name="javax.persistence.jdbc.password" value="Ashwini@30"/>
+
+<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+
+<property name="hibernate.hbm2ddl.auto" value="update"/>
+
+<property name="hibernate.show_sql" value="true"/>
+
+<property name="hibernate.format_sql" value="true"/>
+
+</properties>
+
+</persistence-unit>
+
+</persistence>
